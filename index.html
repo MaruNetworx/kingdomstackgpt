@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KingdomStackGPT™ — From Seed to Stack</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f7f5fc;
+      color: #333;
+    }
+    header {
+      background-color: #8e44ad;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+    main {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    .input-box {
+      margin: 2rem 0;
+    }
+    .input-box textarea {
+      width: 100%;
+      height: 120px;
+      padding: 1rem;
+      font-size: 1rem;
+      border: 2px solid #e91e63;
+      border-radius: 8px;
+    }
+    .input-box button {
+      background-color: #25D366;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+    .results {
+      margin-top: 3rem;
+    }
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      margin-bottom: 1.5rem;
+    }
+    footer {
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>KingdomStackGPT™</h1>
+    <p>From Idea to MVP. Describe your seed, and we'll grow the stack.</p>
+  </header>
+
+  <main>
+    <section class="input-box">
+      <label for="idea"><strong>Describe your idea or pain point:</strong></label>
+      <textarea id="idea" placeholder="e.g., I want to sell handmade oils online with a basic product page and auto-respond to orders."></textarea>
+      <button onclick="generateOutput()">Generate MVP Stack</button>
+    </section>
+
+    <section class="results" id="results">
+    </section>
+  </main>
+
+  <footer>
+    Powered by KingdomStackGPT™ | A Seedware™ Platform by Maru Networx + Consensio GLOBAL
+  </footer>
+
+  <script>
+    function generateOutput() {
+      const input = document.getElementById('idea').value.trim();
+      const results = document.getElementById('results');
+      results.innerHTML = '';
+      if (!input) {
+        alert('Please describe your idea or pain point.');
+        return;
+      }
+
+      const cards = [
+        {
+          title: 'Seed Summary',
+          content: `You want to build: "${input}". We'll generate a lean MVP that turns this idea into a working stack.`
+        },
+        {
+          title: 'Suggested MVP Structure',
+          content: 'Your MVP will include:<ul><li>A mobile-first landing page</li><li>Starter HTML/CSS product layout</li><li>WhatsApp-style chat integration (simulated)</li><li>Blog intro idea to help you rank online</li></ul>'
+        },
+        {
+          title: 'HTML Output Preview',
+          content: '<pre>&lt;div class="product-card"&gt;...&lt;/div&gt;</pre>'
+        },
+        {
+          title: 'Growth Catalyst Tips',
+          content: 'Post your link on WhatsApp Status daily. Use blog SEO to draw organic searchers. Convert interest with automated messaging.'
+        }
+      ];
+
+      cards.forEach(card => {
+        const div = document.createElement('div');
+        div.className = 'card';
+        div.innerHTML = `<h3>${card.title}</h3><p>${card.content}</p>`;
+        results.appendChild(div);
+      });
+    }
+  </script>
+</body>
+</html>
