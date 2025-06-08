@@ -10,7 +10,7 @@
 
 **KingdomStackGPT™** is a lightweight, mobile-first web platform that helps entrepreneurs instantly turn their **idea or pain point** into a functional MVP prototype using HTML, CSS, and JavaScript.
 
-This Seedware™ tool was created as part of the **RRES (Replit Reverse Engineering Strategy)** to demonstrate:
+This Seedware™ tool was created as part of the **RRES (Replicate Reverse Engineering Strategy)** to demonstrate:
 - Strategic rapid prototyping
 - Low-cost MVP launches
 - Real-time value delivery in emerging markets
